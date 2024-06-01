@@ -61,7 +61,7 @@ img {
 }
 
 /* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -134,22 +134,24 @@ h3 {
   body {
     font-size: 14px;
   }
+
   h1 {
     font-size: 70px;
     line-height: 70px;
   }
+
   h2 {
     font-size: 32px;
     line-height: 32px;
   }
+
   h3 {
     font-size: 20px;
     line-height: 24px;
   }
 }
 
-@media ((max-width: 570px)) {
-}
+@media ((max-width: 570px)) {}
 
 .wrapper {
   min-height: 100vh;
@@ -160,7 +162,11 @@ h3 {
   --black: #000f08;
   --white: #fffbfc;
   --white-70: #fffbfcb2;
+  --white-40: #FFFBFC66;
   --transition: all 0.2s;
+  --netbook: 1024px;
+  --tablet: 840px;
+  --mobile: 480px;
 }
 
 .container {
@@ -170,10 +176,12 @@ h3 {
   margin: 0 auto;
   height: 100%;
 }
+
 section {
-  /* padding: 32px 0; */
+  padding: 150px 0;
   /* border-bottom: 1.5px solid var(--grey); */
 }
+
 /* .notmain-page section {
   border-bottom: none;
 } */
@@ -209,7 +217,7 @@ section {
 
 @media ((max-width: 1000px)) {
   section {
-    padding: 16px 0;
+    /* padding: 16px 0; */
   }
 }
 
