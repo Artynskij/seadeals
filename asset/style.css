@@ -167,9 +167,11 @@ h3 {
   --blue: #29235c;
   --red: #931d14;
   --black: #000f08;
+  --grey:#B8B8B8;
   --white: #fffbfc;
   --white-70: #fffbfcb2;
   --white-40: #FFFBFC66;
+  --white-20: #fffbfc3b;
   --transition: all 0.2s;
   --netbook: 1024px;
   --tablet: 840px;
@@ -226,7 +228,7 @@ section {
 
 @media ((max-width: 1000px)) {
   section {
-    /* padding: 16px 0; */
+    padding: 20px 0;
   }
 }
 
