@@ -316,8 +316,11 @@
   background-color: transparent;
   border: 2px solid var(--blue);
   border-style: dashed;
+  transition: all 0.2s;
 }
-
+.button-cursive:hover {
+  border-style: double;
+}
 .uptitle {
   display: flex;
   gap: 10px;
@@ -420,6 +423,7 @@
   color: var(--blue);
 }
 .contact-form {
+  align-self: end;
   grid-column-start: 2;
 
   grid-column-end: 3;
@@ -429,6 +433,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
+  max-width: 633px;
 }
 .form-title {
 }
@@ -450,6 +455,7 @@
   min-height: 180px;
 }
 .contact-form .button {
+  width: fit-content;
   background-color: var(--blue);
   color: var(--white);
 }
@@ -497,6 +503,7 @@
     line-height: 24px;
   }
   .contact-form {
+    max-width: 100%;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -518,8 +525,9 @@
     min-height: 112px;
   }
   .contact-form .button {
-    background-color: var(--blue);
-    color: var(--white);
+    width: 100%;
+    /* background-color: var(--blue);
+    color: var(--white); */
   }
 }
 /* --------------------------------------------- main-banner --------------------------------------------- */
@@ -614,7 +622,7 @@
 
   .main-banner .banner-right {
     border-radius: 50%;
-    transform: scale(1.2) translate(0, 20%);
+    transform: scale(1.1) translate(0, 35%);
   }
 
   .main-banner .banner-bg {
@@ -1327,10 +1335,24 @@
   flex: 1 1 auto;
   /* overflow: hidden; */
 }
+.swiperMY-button-next__ctn,
+.swiperMY-button-prev__ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.swiperMY-button-prev__ctn {
+  left: -80px;
+}
+.swiperMY-button-next__ctn {
+  right: -80px;
+}
 .swiperMY-button-prev,
 .swiperMY-button-next {
-  position: absolute;
-  top: 40%;
+  
 
   padding: 25px 23px;
   background-color: var(--red);
@@ -1339,12 +1361,7 @@
   cursor: pointer;
 }
 
-.swiperMY-button-prev {
-  left: -30px;
-}
-.swiperMY-button-next {
-  right: -30px;
-}
+
 .swiperMY-button-prev img,
 .swiperMY-button-next img {
   width: 23.33px;
@@ -1369,6 +1386,17 @@
     grid-template-columns: 1fr;
     row-gap: 30px;
     margin: 20px 0;
+  }
+  .swiperMY-button-prev,
+  .swiperMY-button-next {
+    padding: 10px 7px;
+  }
+
+  .swiperMY-button-prev__ctn {
+    left: -20px;
+  }
+  .swiperMY-button-next__ctn {
+    right: -20px;
   }
 }
 
@@ -1477,7 +1505,7 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
   margin-top: 80px;
-  padding: 0 150px ;
+  padding: 0 150px;
 }
 @media (max-width: 840px) {
   .about-info {
